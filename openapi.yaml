@@ -1,26 +1,33 @@
 openapi: 3.1.0
 info:
   title: DERMIS - Skin Evaluation API
-  description: API for DERMIS system which evaluates skin conditions
-  version: 0.0.0
+  description: API for DERMIS System which evaluates skin conditions
+  version: 0.1.0
 paths:
   /imgeval:
     post:
+      summary: Evaluate skin condition(s) based on the given image
+      description: |
+        Predict skin condition(s) based on the image in request body with trained intelligent model.
+        Returns possible condition(s) and their confidence level.
       requestBody:
-        description: Contains data for skin evaluation
+        description: Contains data used for prediction
         content:
           image/jpeg:
             schema:
+              title: Skin Image
+              description: a base64-encoded image of the skin which is to be evaluated
               type: string
               format: byte
-              description: base64 encoded image
         required: true
       responses:
         "200":
-          description: success
+          description: Successful skin evaluation
           content:
             application/json:
-              schema: # Need description somewhere
+              schema:
+                title: Skin Evaluation Result
+                description: Skin evaluation result containing an array possible condition(s) and their confidence level in JSON format
                 type: array
                 items:
                   type: object
@@ -31,5 +38,9 @@ paths:
                       type: number
                     treatment:
                       type: string
-
-
+              example:
+                - condition: Acne
+                  confidence: 0.7
+                - condition: Birthmark
+                  confidence: 0.4
+          # links: # to be added
