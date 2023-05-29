@@ -1,15 +1,15 @@
 openapi: 3.1.0
 info:
   title: DERMIS - Skin Evaluation API
-  description: API for DERMIS System which evaluates skin conditions
-  version: 0.1.0
+  description: API for DERMIS System which evaluates skin conditions.
+  version: 0.2.0
 paths:
   /imgeval:
     post:
-      summary: Evaluate skin condition(s) based on the given image
+      summary: Evaluate skin condition based on the given image
       description: |
-        Predict skin condition(s) based on the image in request body with trained intelligent model.
-        Returns possible condition(s) and their confidence level.
+        Predict skin condition based on the image in request body with trained intelligent model.
+        Returns possible condition and its confidence level.
       requestBody:
         description: Contains data used for prediction
         content:
@@ -22,25 +22,32 @@ paths:
         required: true
       responses:
         "200":
-          description: Successful skin evaluation
+          description: Successful Skin Evaluation
           content:
             application/json:
               schema:
                 title: Skin Evaluation Result
-                description: Skin evaluation result containing an array possible condition(s) and their confidence level in JSON format
-                type: array
-                items:
-                  type: object
-                  properties:
-                    condition:
-                      type: string
-                    confidence:
-                      type: number
-                    treatment:
-                      type: string
-              example:
-                - condition: Acne
-                  confidence: 0.7
-                - condition: Birthmark
-                  confidence: 0.4
+                description: Skin evaluation result containing possible condition and its confidence level in JSON format
+                type: object
+                required:
+                  - condition
+                  - confidence
+                properties:
+                  condition:
+                    type: string
+                  confidence:
+                    type: number
+              examples:
+                acne:
+                  summary: Acne
+                  description: Evaluation of acne condition with high confidence.
+                  value:
+                    condition: Acne
+                    confidence: 0.7
+                birthmark:
+                  summary: Birthmark
+                  description: Evaluation of birthmark condition with low confidence.
+                  value:
+                    condition: Birthmark
+                    confidence: 0.3
           # links: # to be added
