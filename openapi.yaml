@@ -10,6 +10,7 @@ paths:
       description: |
         Predict skin condition based on the image in request body with trained intelligent model.
         Returns possible condition and its confidence level.
+      operationId: skin_model.eval
       requestBody:
         description: Contains data used for prediction
         content:
