@@ -2,7 +2,7 @@ openapi: 3.0.3
 info:
   title: DERMIS - Skin Evaluation API
   description: API for DERMIS System which evaluates skin conditions.
-  version: 0.3.0
+  version: 0.4.0
 paths:
   /imgeval:
     post:
@@ -52,4 +52,12 @@ paths:
                   value:
                     condition: Birthmark
                     confidence: 0.3
-          # links: # to be added
+          links:
+            condition_diagnosis:
+              description: >
+                The 'condition' value returned in the response can be used as
+                the 'condition' query parameter
+              operationRef: >
+                https://raw.githubusercontent.com/yasirkm/DERMIS-SkinConditionDiagnosis-API/master/openapi.yaml
+              parameters:
+                condition: $response.body#/condition
