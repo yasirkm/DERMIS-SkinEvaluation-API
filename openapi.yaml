@@ -12,6 +12,8 @@ paths:
         Returns possible condition and its confidence level.
       x-openapi-router-controller: handlers.skin_evaluation
       operationId: img_eval
+      tags:
+        - skin
       requestBody:
         description: Contains data used for prediction
         content:

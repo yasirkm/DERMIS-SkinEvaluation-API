@@ -878,9 +878,9 @@ ul.nav-tabs {
             -->
             <li class="nav-fixed nav-header active" data-group="_"><a href="#api-_">API Summary</a></li>
 
-                  <li class="nav-header" data-group="Default"><a href="#api-Default">API Methods - Default</a></li>
-                    <li data-group="Default" data-name="imgEval" class="">
-                      <a href="#api-Default-imgEval">imgEval</a>
+                  <li class="nav-header" data-group="Skin"><a href="#api-Skin">API Methods - Skin</a></li>
+                    <li data-group="Skin" data-name="imgEval" class="">
+                      <a href="#api-Skin-imgEval">imgEval</a>
                     </li>
           </ul>
         </nav>
@@ -895,7 +895,7 @@ ul.nav-tabs {
         <div id="header">
           <div id="api-_">
             <h2 id="welcome-to-apidoc">API and SDK Documentation</h2>
-              <div class="app-desc">Version: 0.4.0</div>
+              <div class="app-desc">Version: 0.4.1</div>
             <hr>
             <div id="app-description" class="app-desc">
                 API for DERMIS System which evaluates skin conditions.
@@ -903,10 +903,10 @@ ul.nav-tabs {
           </div>
         </div>
         <div id="sections">
-                <section id="api-Default">
-                  <h1>Default</h1>
-                    <div id="api-Default-imgEval">
-                      <article id="api-Default-imgEval-0" data-group="User" data-name="imgEval" data-version="0">
+                <section id="api-Skin">
+                  <h1>Skin</h1>
+                    <div id="api-Skin-imgEval">
+                      <article id="api-Skin-imgEval-0" data-group="User" data-name="imgEval" data-version="0">
                         <div class="pull-left">
                           <h1>imgEval</h1>
                           <p>Evaluate skin condition based on the given image</p>
@@ -924,22 +924,22 @@ Returns possible condition and its confidence level.
                           <h3>Usage and SDK Samples</h3>
                         </p>
                         <ul class="nav nav-tabs nav-tabs-examples">
-                          <li class="active"><a href="#examples-Default-imgEval-0-curl">Curl</a></li>
-                          <li class=""><a href="#examples-Default-imgEval-0-java">Java</a></li>
-                          <li class=""><a href="#examples-Default-imgEval-0-android">Android</a></li>
-                          <!--<li class=""><a href="#examples-Default-imgEval-0-groovy">Groovy</a></li>-->
-                          <li class=""><a href="#examples-Default-imgEval-0-objc">Obj-C</a></li>
-                          <li class=""><a href="#examples-Default-imgEval-0-javascript">JavaScript</a></li>
-                          <!--<li class=""><a href="#examples-Default-imgEval-0-angular">Angular</a></li>-->
-                          <li class=""><a href="#examples-Default-imgEval-0-csharp">C#</a></li>
-                          <li class=""><a href="#examples-Default-imgEval-0-php">PHP</a></li>
-                          <li class=""><a href="#examples-Default-imgEval-0-perl">Perl</a></li>
-                          <li class=""><a href="#examples-Default-imgEval-0-python">Python</a></li>
-                          <li class=""><a href="#examples-Default-imgEval-0-rust">Rust</a></li>
+                          <li class="active"><a href="#examples-Skin-imgEval-0-curl">Curl</a></li>
+                          <li class=""><a href="#examples-Skin-imgEval-0-java">Java</a></li>
+                          <li class=""><a href="#examples-Skin-imgEval-0-android">Android</a></li>
+                          <!--<li class=""><a href="#examples-Skin-imgEval-0-groovy">Groovy</a></li>-->
+                          <li class=""><a href="#examples-Skin-imgEval-0-objc">Obj-C</a></li>
+                          <li class=""><a href="#examples-Skin-imgEval-0-javascript">JavaScript</a></li>
+                          <!--<li class=""><a href="#examples-Skin-imgEval-0-angular">Angular</a></li>-->
+                          <li class=""><a href="#examples-Skin-imgEval-0-csharp">C#</a></li>
+                          <li class=""><a href="#examples-Skin-imgEval-0-php">PHP</a></li>
+                          <li class=""><a href="#examples-Skin-imgEval-0-perl">Perl</a></li>
+                          <li class=""><a href="#examples-Skin-imgEval-0-python">Python</a></li>
+                          <li class=""><a href="#examples-Skin-imgEval-0-rust">Rust</a></li>
                         </ul>
 
                         <div class="tab-content">
-                          <div class="tab-pane active" id="examples-Default-imgEval-0-curl">
+                          <div class="tab-pane active" id="examples-Skin-imgEval-0-curl">
                             <pre class="prettyprint"><code class="language-bsh">curl -X POST \
  -H "Accept: application/json" \
  -H "Content-Type: image/jpeg" \
@@ -947,27 +947,27 @@ Returns possible condition and its confidence level.
  -d 'Custom MIME type example not yet supported: image/jpeg'
 </code></pre>
                           </div>
-                          <div class="tab-pane" id="examples-Default-imgEval-0-java">
+                          <div class="tab-pane" id="examples-Skin-imgEval-0-java">
                             <pre class="prettyprint"><code class="language-java">import org.openapitools.client.*;
 import org.openapitools.client.auth.*;
 import org.openapitools.client.model.*;
-import org.openapitools.client.api.DefaultApi;
+import org.openapitools.client.api.SkinApi;
 
 import java.io.File;
 import java.util.*;
 
-public class DefaultApiExample {
+public class SkinApiExample {
     public static void main(String[] args) {
 
         // Create an instance of the API class
-        DefaultApi apiInstance = new DefaultApi();
+        SkinApi apiInstance = new SkinApi();
         byte[] body = BYTE_ARRAY_DATA_HERE; // byte[] | 
 
         try {
             Skin_Evaluation_Result result = apiInstance.imgEval(body);
             System.out.println(result);
         } catch (ApiException e) {
-            System.err.println("Exception when calling DefaultApi#imgEval");
+            System.err.println("Exception when calling SkinApi#imgEval");
             e.printStackTrace();
         }
     }
@@ -975,33 +975,33 @@ public class DefaultApiExample {
 </code></pre>
                           </div>
 
-                          <div class="tab-pane" id="examples-Default-imgEval-0-android">
-                            <pre class="prettyprint"><code class="language-java">import org.openapitools.client.api.DefaultApi;
+                          <div class="tab-pane" id="examples-Skin-imgEval-0-android">
+                            <pre class="prettyprint"><code class="language-java">import org.openapitools.client.api.SkinApi;
 
-public class DefaultApiExample {
+public class SkinApiExample {
     public static void main(String[] args) {
-        DefaultApi apiInstance = new DefaultApi();
+        SkinApi apiInstance = new SkinApi();
         byte[] body = BYTE_ARRAY_DATA_HERE; // byte[] | 
 
         try {
             Skin_Evaluation_Result result = apiInstance.imgEval(body);
             System.out.println(result);
         } catch (ApiException e) {
-            System.err.println("Exception when calling DefaultApi#imgEval");
+            System.err.println("Exception when calling SkinApi#imgEval");
             e.printStackTrace();
         }
     }
 }</code></pre>
                           </div>
   <!--
-  <div class="tab-pane" id="examples-Default-imgEval-0-groovy">
+  <div class="tab-pane" id="examples-Skin-imgEval-0-groovy">
   <pre class="prettyprint language-json prettyprinted" data-type="json"><code>Coming Soon!</code></pre>
   </div> -->
-                            <div class="tab-pane" id="examples-Default-imgEval-0-objc">
+                            <div class="tab-pane" id="examples-Skin-imgEval-0-objc">
                               <pre class="prettyprint"><code class="language-cpp">
 
 // Create an instance of the API class
-DefaultApi *apiInstance = [[DefaultApi alloc] init];
+SkinApi *apiInstance = [[SkinApi alloc] init];
 byte[] *body = BYTE_ARRAY_DATA_HERE; // 
 
 // Evaluate skin condition based on the given image
@@ -1017,11 +1017,11 @@ byte[] *body = BYTE_ARRAY_DATA_HERE; //
 </code></pre>
                             </div>
 
-                            <div class="tab-pane" id="examples-Default-imgEval-0-javascript">
+                            <div class="tab-pane" id="examples-Skin-imgEval-0-javascript">
                               <pre class="prettyprint"><code class="language-js">var DermisSkinEvaluationApi = require('dermis_skin_evaluation_api');
 
 // Create an instance of the API class
-var api = new DermisSkinEvaluationApi.DefaultApi()
+var api = new DermisSkinEvaluationApi.SkinApi()
 var body = BYTE_ARRAY_DATA_HERE; // {byte[]} 
 
 var callback = function(error, data, response) {
@@ -1035,10 +1035,10 @@ api.imgEval(body, callback);
 </code></pre>
                             </div>
 
-                            <!--<div class="tab-pane" id="examples-Default-imgEval-0-angular">
+                            <!--<div class="tab-pane" id="examples-Skin-imgEval-0-angular">
               <pre class="prettyprint language-json prettyprinted" data-type="json"><code>Coming Soon!</code></pre>
             </div>-->
-                            <div class="tab-pane" id="examples-Default-imgEval-0-csharp">
+                            <div class="tab-pane" id="examples-Skin-imgEval-0-csharp">
                               <pre class="prettyprint"><code class="language-cs">using System;
 using System.Diagnostics;
 using Org.OpenAPITools.Api;
@@ -1053,7 +1053,7 @@ namespace Example
         {
 
             // Create an instance of the API class
-            var apiInstance = new DefaultApi();
+            var apiInstance = new SkinApi();
             var body = BYTE_ARRAY_DATA_HERE;  // byte[] | 
 
             try {
@@ -1061,7 +1061,7 @@ namespace Example
                 Skin_Evaluation_Result result = apiInstance.imgEval(body);
                 Debug.WriteLine(result);
             } catch (Exception e) {
-                Debug.Print("Exception when calling DefaultApi.imgEval: " + e.Message );
+                Debug.Print("Exception when calling SkinApi.imgEval: " + e.Message );
             }
         }
     }
@@ -1069,30 +1069,30 @@ namespace Example
 </code></pre>
                             </div>
 
-                            <div class="tab-pane" id="examples-Default-imgEval-0-php">
+                            <div class="tab-pane" id="examples-Skin-imgEval-0-php">
                               <pre class="prettyprint"><code class="language-php"><&#63;php
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Create an instance of the API class
-$api_instance = new OpenAPITools\Client\Api\DefaultApi();
+$api_instance = new OpenAPITools\Client\Api\SkinApi();
 $body = BYTE_ARRAY_DATA_HERE; // byte[] | 
 
 try {
     $result = $api_instance->imgEval($body);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling DefaultApi->imgEval: ', $e->getMessage(), PHP_EOL;
+    echo 'Exception when calling SkinApi->imgEval: ', $e->getMessage(), PHP_EOL;
 }
 ?></code></pre>
                             </div>
 
-                            <div class="tab-pane" id="examples-Default-imgEval-0-perl">
+                            <div class="tab-pane" id="examples-Skin-imgEval-0-perl">
                               <pre class="prettyprint"><code class="language-perl">use Data::Dumper;
 use WWW::OPenAPIClient::Configuration;
-use WWW::OPenAPIClient::DefaultApi;
+use WWW::OPenAPIClient::SkinApi;
 
 # Create an instance of the API class
-my $api_instance = WWW::OPenAPIClient::DefaultApi->new();
+my $api_instance = WWW::OPenAPIClient::SkinApi->new();
 my $body = WWW::OPenAPIClient::Object::byte[]->new(); # byte[] | 
 
 eval {
@@ -1100,11 +1100,11 @@ eval {
     print Dumper($result);
 };
 if ($@) {
-    warn "Exception when calling DefaultApi->imgEval: $@\n";
+    warn "Exception when calling SkinApi->imgEval: $@\n";
 }</code></pre>
                             </div>
 
-                            <div class="tab-pane" id="examples-Default-imgEval-0-python">
+                            <div class="tab-pane" id="examples-Skin-imgEval-0-python">
                               <pre class="prettyprint"><code class="language-python">from __future__ import print_statement
 import time
 import openapi_client
@@ -1112,7 +1112,7 @@ from openapi_client.rest import ApiException
 from pprint import pprint
 
 # Create an instance of the API class
-api_instance = openapi_client.DefaultApi()
+api_instance = openapi_client.SkinApi()
 body = BYTE_ARRAY_DATA_HERE # byte[] | 
 
 try:
@@ -1120,16 +1120,16 @@ try:
     api_response = api_instance.img_eval(body)
     pprint(api_response)
 except ApiException as e:
-    print("Exception when calling DefaultApi->imgEval: %s\n" % e)</code></pre>
+    print("Exception when calling SkinApi->imgEval: %s\n" % e)</code></pre>
                             </div>
 
-                            <div class="tab-pane" id="examples-Default-imgEval-0-rust">
-                              <pre class="prettyprint"><code class="language-rust">extern crate DefaultApi;
+                            <div class="tab-pane" id="examples-Skin-imgEval-0-rust">
+                              <pre class="prettyprint"><code class="language-rust">extern crate SkinApi;
 
 pub fn main() {
     let body = BYTE_ARRAY_DATA_HERE; // byte[]
 
-    let mut context = DefaultApi::Context::default();
+    let mut context = SkinApi::Context::default();
     let result = client.imgEval(body, &context).wait();
 
     println!("{:?}", result);
@@ -1201,23 +1201,23 @@ $(document).ready(function() {
 
 
                           <h2>Responses</h2>
-                            <h3 id="examples-Default-imgEval-title-200"></h3>
-                            <p id="examples-Default-imgEval-description-200" class="marked"></p>
+                            <h3 id="examples-Skin-imgEval-title-200"></h3>
+                            <p id="examples-Skin-imgEval-description-200" class="marked"></p>
                             <script>
-                              var responseDefault200_description = `Successful Skin Evaluation`;
-                              var responseDefault200_description_break = responseDefault200_description.indexOf('\n');
-                              if (responseDefault200_description_break == -1) {
-                                $("#examples-Default-imgEval-title-200").text("Status: 200 - " + responseDefault200_description);
+                              var responseSkin200_description = `Successful Skin Evaluation`;
+                              var responseSkin200_description_break = responseSkin200_description.indexOf('\n');
+                              if (responseSkin200_description_break == -1) {
+                                $("#examples-Skin-imgEval-title-200").text("Status: 200 - " + responseSkin200_description);
                               } else {
-                                $("#examples-Default-imgEval-title-200").text("Status: 200 - " + responseDefault200_description.substring(0, responseDefault200_description_break));
-                                $("#examples-Default-imgEval-description-200").html(responseDefault200_description.substring(responseDefault200_description_break));
+                                $("#examples-Skin-imgEval-title-200").text("Status: 200 - " + responseSkin200_description.substring(0, responseSkin200_description_break));
+                                $("#examples-Skin-imgEval-description-200").html(responseSkin200_description.substring(responseSkin200_description_break));
                               }
                             </script>
 
 
-                            <ul id="responses-detail-Default-imgEval-200" class="nav nav-tabs nav-tabs-examples" >
+                            <ul id="responses-detail-Skin-imgEval-200" class="nav nav-tabs nav-tabs-examples" >
                                 <li class="active">
-                                  <a data-toggle="tab" href="#responses-Default-imgEval-200-schema">Schema</a>
+                                  <a data-toggle="tab" href="#responses-Skin-imgEval-200-schema">Schema</a>
                                 </li>
 
 
@@ -1226,9 +1226,9 @@ $(document).ready(function() {
                             </ul>
 
 
-                            <div class="tab-content" id="responses-Default-imgEval-200-wrapper" style='margin-bottom: 10px;'>
-                                <div class="tab-pane active" id="responses-Default-imgEval-200-schema">
-                                  <div id="responses-Default-imgEval-schema-200" class="exampleStyle">
+                            <div class="tab-content" id="responses-Skin-imgEval-200-wrapper" style='margin-bottom: 10px;'>
+                                <div class="tab-pane active" id="responses-Skin-imgEval-200-schema">
+                                  <div id="responses-Skin-imgEval-schema-200" class="exampleStyle">
                                     <script>
                                       $(document).ready(function() {
                                         var schemaWrapper = ;
@@ -1253,14 +1253,14 @@ $(document).ready(function() {
                                         }
 
                                         var view = new JSONSchemaView(schema, 3);
-                                        $('#responses-Default-imgEval-200-schema-data').val(JSON.stringify(schema));
-                                        var result = $('#responses-Default-imgEval-schema-200');
+                                        $('#responses-Skin-imgEval-200-schema-data').val(JSON.stringify(schema));
+                                        var result = $('#responses-Skin-imgEval-schema-200');
                                         result.empty();
                                         result.append(view.render());
                                       });
                                     </script>
                                   </div>
-                                  <input id='responses-Default-imgEval-200-schema-data' type='hidden' value=''></input>
+                                  <input id='responses-Skin-imgEval-200-schema-data' type='hidden' value=''></input>
                                 </div>
                             </div>
                         </article>
