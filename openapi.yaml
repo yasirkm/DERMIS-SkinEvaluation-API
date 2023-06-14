@@ -22,7 +22,7 @@ paths:
               title: Skin Image
               description: a base64-encoded image of the skin which is to be evaluated
               type: string
-              # format: byte
+              format: byte
         required: true
       responses:
         "200":
